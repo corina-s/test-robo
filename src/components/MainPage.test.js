@@ -1,11 +1,16 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import App from './App';
+import MainPage from './MainPage';
 
-it('expect to render App Component', () => {
+let wrapper;
+
+beforeEach(()=>{
+  const mockProps = {}
+})
+it('expect to render MainPage Component', () => {
   const mockStore = {
     robots: [],
     searchField: ''
   }
-  expect(shallow(<App store={mockStore}/>)).toMatchSnapshot()
+  expect(shallow(<MainPage store={mockStore}/>)).toMatchSnapshot()
 })

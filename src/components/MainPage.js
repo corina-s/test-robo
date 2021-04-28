@@ -21,7 +21,7 @@ class MainPage extends Component {
     })
     return (
       <div className='tc'>
-        <Header count={this.state.count}/>
+        <Header/>
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           { isPending ? <h1>Loading</h1> :

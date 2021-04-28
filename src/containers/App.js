@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setSearchField, requestRobots } from '../actions';
 
-import MainPage from '../components/MainPage';
-
 import './App.css';
 import MainPage from '../components/MainPage';
 
@@ -25,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
 class App extends Component {
 
   render() {
-    <MainPage/>
+    return <MainPage {...this.props}/>
   }
 }
 
