@@ -36,3 +36,19 @@ it('filters robots correctly', () => {
     email: 'john@gmail.com'
   }])
 })
+it('filters robots correctly 2', () => {
+  const mockProps3 = {
+    onRequestRobots: jest.fn(),
+    robots: [{
+      id: 3,
+      name: 'John',
+      email: 'john@gmail.com'
+    }],
+    searchField: 'a',
+    isPending: false
+  }
+  let filteredRobots = []
+  let wrapper3 = shallow(<MainPage {...mockProps3}/>)
+  // expect(wrapper2.instance().filterRobots()).toEqual([])
+  expect(wrapper3.instance().filterRobots()).toEqual(filteredRobots)
+})
